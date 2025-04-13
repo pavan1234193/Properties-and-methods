@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document Object Example</title>
+
+    <script>
+
+        function showDocumentProperties() {
+
+            document.getElementById("info").innerHTML =
+
+                "Title: " + document.title + "<br>" +
+
+                "URL: " + document.URL + "<br>" +
+
+                "Last Modified: " + document.lastModified;
+
+        }
+
+
+
+        function changeTitle() {
+
+            document.title = "New Document Title";
+
+            alert("Document title changed!");
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="showDocumentProperties()">
+
+
+
+    <h2>Document Object Example</h2>
+
+    <div id="info"></div>
+
+
+
+    <br>
+
+    <button onclick="changeTitle()">Change Document Title</button>
+
+
+
+</body>
+
+</html>
+
+B) <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Window Object Example</title>
+
+    <script>
+
+        function showWindowProperties() {
+
+            let output = "Window Width: " + window.innerWidth + "px<br>" +
+
+                         "Window Height: " + window.innerHeight + "px<br>" +
+
+                         "Screen Width: " + window.screen.width + "px<br>" +
+
+                         "Screen Height: " + window.screen.height + "px";
+
+            document.getElementById("windowInfo").innerHTML = output;
+
+        }
+
+
+
+        function openNewWindow() {
+
+            window.open("https://example.com", "_blank", "width=400,height=400");
+
+        }
+
+
+
+        function showAlert() {
+
+            window.alert("Hello from window object!");
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="showWindowProperties()">
+
+
+
+    <h2>Window Object Example</h2>
+
+    <div id="windowInfo"></div>
+
+
+
+    <br>
+
+    <button onclick="openNewWindow()">Open New Window</button>
+
+    <button onclick="showAlert()">Show Alert</button>
+
+
+
+</body>
+
+</html>
